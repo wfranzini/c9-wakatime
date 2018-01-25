@@ -370,6 +370,8 @@ define(function(require, exports, module) {
       if (!file)
         return;
 
+      console.log(file);
+      console.log(c9.workspaceDir);
       if (file.indexOf('~') == 0) {
         file = path.join(c9.home, file.substring(1));
       } else if (file.indexOf(c9.home, 0) != 0) {
@@ -475,7 +477,6 @@ define(function(require, exports, module) {
     }
 
     function setStatusBarTitle(text) {
-      // TODO: update status bar onhover title
       return;
     }
 
