@@ -375,11 +375,11 @@ define(function(require, exports, module) {
       console.log("-- file ------------------------------");
       console.log(file);
       console.log("--------------------------------------");
-      return;
+      //return;
       if (file.indexOf('~') == 0) {
         file = path.join(c9.home, file.substring(1));
       } else if (file.indexOf(c9.home, 0) != 0) {
-        file = path.join(c9.workspaceDir, file);
+        file = path.join(c9.environmentDir, file);
       }
 
       var time = Date.now();
